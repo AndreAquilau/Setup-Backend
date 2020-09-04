@@ -143,6 +143,10 @@ module.exports = {
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:prettier/recommended',
   ],
+  globals: {
+    Atomics: 'readonly',
+    Shared: 'readonly',
+  },
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 11,
