@@ -171,7 +171,7 @@ node_modules
 
 #### Install Babel and babel.config.js
 ~~~bash
-yarn add --dev babel @babel/cli @babel/core @babel/node @babel/preset-end @babel/preset-typescript babel-plugin-module-resolver @babel/plugin-proposal-class-properties @babel/plugin-proposal-decorators
+yarn add --dev bebel @babel/cli @babel/core @babel/node @babel/preset-end @babel/preset-typescript babel-plugin-module-resolver @babel/plugin-proposal-class-properties @babel/plugin-proposal-decorators
 ~~~
 babel.config.js
 ~~~js
