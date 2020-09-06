@@ -211,7 +211,7 @@ module.exports = {
 ~~~
 ##### Build Script Babel
 ~~~js
---extension      = qual são os aquivos que seram compilados
+--extensions      = qual são os aquivos que seram compilados
 --out-dir        = diretorio de saída
 --copy-files     = copiar os arquivos e coloca na pasta de saída mesmo não sendo .js ou .ts, podendo ser html, etc...
 --no-copy-ignore = não copiar os arquivos que definimos no ignore: ['**/*.spec.ts'] do babel.config.js
