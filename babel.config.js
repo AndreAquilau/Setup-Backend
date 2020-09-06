@@ -16,16 +16,18 @@ module.exports = {
       {
         alias: {
           '@config': './src/config',
-          '@models': './src/models',
           '@controllers': './src/controllers',
-          '@middleware': './src/middeware',
           '@database': './src/database',
+          '@middleware': './src/middleware',
+          '@models': './src/models',
           '@repository': './src/repository',
           '@routes': './src/routes',
           '@services': './src/services',
         },
       },
     ],
+    ['@babel/plugin-proposal-decorators', { legacy: true }],
+    ['@babel/plugin-proposal-class-properties', { loose: true }],
   ],
   ignore: ['**/*.spec.ts'],
 };

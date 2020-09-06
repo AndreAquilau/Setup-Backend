@@ -154,8 +154,11 @@ module.exports = {
   },
   plugins: ['@typescript-eslint'],
   rules: {
-    'import/no-unresolved': 'off',
     'class-methods-use-this': 'off',
+    'no-return-await': 'off',
+    'import/no-unresolved': 'off',
+    'no-console': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
   },
 };
 ~~~
@@ -168,7 +171,7 @@ node_modules
 
 #### Install Babel and babel.config.js
 ~~~bash
-yarn add --dev babel @babel/cli @babel/core @babel/node @babel/preset-end @babel/preset-typescript babel-plugin-module-resolver
+yarn add --dev babel @babel/cli @babel/core @babel/node @babel/preset-end @babel/preset-typescript babel-plugin-module-resolver @babel/plugin-proposal-class-properties @babel/plugin-proposal-decorators
 ~~~
 babel.config.js
 ~~~js
@@ -190,16 +193,18 @@ module.exports = {
       {
         alias: {
           '@config': './src/config',
-          '@models': './src/models',
           '@controllers': './src/controllers',
-          '@middleware': './src/middeware',
           '@database': './src/database',
+          '@middleware': './src/middleware',
+          '@models': './src/models',
           '@repository': './src/repository',
           '@routes': './src/routes',
           '@services': './src/services',
         },
       },
     ],
+    ['@babel/plugin-proposal-decorators', { legacy: true }],
+    ['@babel/plugin-proposal-class-properties', { loose: true }],
   ],
   ignore: ['**/*.spec.ts'],
 };

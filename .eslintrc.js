@@ -21,7 +21,10 @@ module.exports = {
   },
   plugins: ['@typescript-eslint'],
   rules: {
-    'import/no-unresolved': 'off',
     'class-methods-use-this': 'off',
+    'no-return-await': 'off',
+    'import/no-unresolved': 'off',
+    'no-console': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
   },
 };
